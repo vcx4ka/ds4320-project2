@@ -1,0 +1,152 @@
+2026-04-30 05:51:58,229 - INFO - Starting Movie Recommendation Pipeline
+2026-04-30 05:51:58,232 - INFO - Timestamp: 2026-04-30 05:51:58.232494
+2026-04-30 06:18:17,066 - INFO - Starting Movie Recommendation Pipeline
+2026-04-30 06:18:17,069 - INFO - Timestamp: 2026-04-30 06:18:17.069869
+2026-04-30 06:18:21,351 - INFO - Connecting to MongoDB: movielens_recommender
+2026-04-30 06:18:21,664 - INFO - Collection 'users' contains 6040 documents
+2026-04-30 06:18:59,575 - INFO - Connecting to MongoDB: movielens_recommender
+2026-04-30 06:18:59,897 - INFO - Successfully connected to MongoDB Atlas
+2026-04-30 06:18:59,914 - INFO - Collection 'users' contains 6040 documents
+2026-04-30 06:21:09,029 - INFO - Executing MongoDB aggregation pipeline...
+2026-04-30 06:21:45,653 - INFO - Created DataFrame with 1,000,209 rows and 10 columns
+2026-04-30 06:22:18,000 - INFO - Building user-movie matrix...
+2026-04-30 06:22:19,542 - INFO - Matrix shape: (6040, 3706)
+2026-04-30 06:22:19,543 - INFO -   Users: 6,040
+2026-04-30 06:22:19,545 - INFO -   Movies: 3,706
+2026-04-30 06:22:19,613 - INFO -   Sparsity: 95.53% (typical for recommendation systems)
+2026-04-30 06:22:20,214 - INFO -   Sparse matrix size: 7.6 MB
+2026-04-30 06:22:20,216 - INFO - Training k-Nearest Neighbors model...
+2026-04-30 06:22:20,261 - INFO - Testing recommendation function...
+2026-04-30 06:22:39,692 - INFO - Evaluating model performance...
+2026-04-30 06:22:39,840 - INFO - Training set: 800,167 ratings
+2026-04-30 06:22:39,842 - INFO - Test set: 200,042 ratings
+2026-04-30 06:22:39,876 - INFO - 
+Baseline Model (predict mean = 3.581):
+2026-04-30 06:22:39,879 - INFO -   RMSE: 1.1197
+2026-04-30 06:22:39,880 - INFO -   MAE: 0.9360
+2026-04-30 06:22:39,898 - INFO - 
+Evaluating CF model on 10,000 sample ratings...
+2026-04-30 06:38:55,156 - INFO - 
+Collaborative Filtering Model (sample of 10,000 ratings):
+2026-04-30 06:38:55,158 - INFO -   RMSE: 1.1288
+2026-04-30 06:38:55,160 - INFO -   MAE: 0.8719
+2026-04-30 06:38:55,161 - INFO -   Evaluation time: 975.26 seconds
+2026-04-30 06:38:55,167 - INFO -   RMSE: -0.8% better than baseline
+2026-04-30 06:38:55,169 - INFO -   MAE: 6.8% better than baseline
+2026-04-30 10:14:18,271 - INFO - Evaluating model performance...
+2026-04-30 10:14:18,463 - INFO - Training set: 800,167 ratings
+2026-04-30 10:14:18,466 - INFO - Test set: 200,042 ratings
+2026-04-30 10:14:18,503 - INFO - 
+Baseline Model (predict mean = 3.581):
+2026-04-30 10:14:18,505 - INFO -   RMSE: 1.1197
+2026-04-30 10:14:18,507 - INFO -   MAE: 0.9360
+2026-04-30 10:14:18,524 - INFO - 
+Evaluating CF model on 10,000 sample ratings...
+2026-04-30 10:30:12,521 - INFO - 
+Collaborative Filtering Model (sample of 10,000 ratings):
+2026-04-30 10:30:12,524 - INFO -   RMSE: 1.1288
+2026-04-30 10:30:12,526 - INFO -   MAE: 0.8719
+2026-04-30 10:30:12,528 - INFO -   Evaluation time: 953.99 seconds
+2026-04-30 10:30:12,530 - INFO - 
+PERFORMANCE IMPROVEMENT:
+2026-04-30 10:30:12,532 - INFO -   RMSE: -0.8% better than baseline
+2026-04-30 10:30:12,534 - INFO -   MAE: 6.8% better than baseline
+2026-04-30 11:58:12,650 - INFO - Publication-quality figure saved as 'recommendation_system_results.png'
+2026-05-08 06:15:10,941 - INFO - Starting Movie Recommendation Pipeline...
+
+2026-05-08 06:23:29,917 - INFO - Connecting to MongoDB: movielens_recommender
+2026-05-08 06:23:30,321 - INFO - Successfully connected to MongoDB Atlas
+2026-05-08 06:23:30,437 - INFO - Collection 'users' contains 6040 documents
+2026-05-08 06:30:39,385 - INFO - Attempting to connect to MongoDB Atlas...
+2026-05-08 06:30:39,389 - INFO -    Connecting to MongoDB: movielens_recommender
+2026-05-08 06:30:39,734 - INFO -    Successfully connected to MongoDB Atlas
+2026-05-08 06:30:39,748 - INFO -    Collection 'users' contains 6040 documents
+2026-05-08 06:31:30,182 - INFO - Executing MongoDB aggregation pipeline to construct dataframe...
+2026-05-08 06:32:12,326 - INFO -    Created DataFrame with 1,000,209 rows and 10 columns
+2026-05-08 06:32:12,329 - INFO -    Data shape: (1000209, 10)
+2026-05-08 06:32:14,295 - INFO -    Memory usage: 344.2 MB
+2026-05-08 07:11:29,404 - INFO - Building user-movie matrix...
+2026-05-08 07:11:32,197 - INFO - Matrix shape: (6040, 3706)
+2026-05-08 07:11:32,200 - INFO -   Users: 6,040
+2026-05-08 07:11:32,202 - INFO -   Movies: 3,706
+2026-05-08 07:11:32,354 - INFO -   Sparsity: 95.53% (typical for recommendation systems)
+2026-05-08 07:11:33,241 - INFO -   Sparse matrix size: 7.6 MB
+2026-05-08 07:11:33,243 - INFO - Training k-Nearest Neighbors model...
+2026-05-08 07:11:33,273 - INFO - Model training complete!
+2026-05-08 07:11:49,230 - INFO - Building user-movie matrix...
+2026-05-08 07:11:51,030 - INFO - Matrix shape: (6040, 3706)
+2026-05-08 07:11:51,033 - INFO -   Users: 6,040
+2026-05-08 07:11:51,034 - INFO -   Movies: 3,706
+2026-05-08 07:11:51,095 - INFO -   Sparsity: 95.53%
+2026-05-08 07:11:51,654 - INFO -   Sparse matrix size: 7.6 MB
+2026-05-08 07:11:51,655 - INFO - Training k-Nearest Neighbors model...
+2026-05-08 07:11:51,667 - INFO - Model training complete!
+2026-05-08 07:13:35,599 - INFO - Building user-movie matrix...
+2026-05-08 07:13:37,330 - INFO - Matrix shape: (6040, 3706)
+2026-05-08 07:13:37,332 - INFO -   Users: 6,040
+2026-05-08 07:13:37,335 - INFO -   Movies: 3,706
+2026-05-08 07:13:37,420 - INFO -   Sparsity: 95.53%
+2026-05-08 07:13:38,060 - INFO - Training k-Nearest Neighbors model...
+2026-05-08 07:13:38,069 - INFO - Model training complete!
+2026-05-08 07:21:17,245 - INFO - Testing recommendation function...
+2026-05-08 07:27:33,932 - INFO - Evaluating model performance...
+2026-05-08 07:27:34,138 - INFO -   Training set: 800,167 ratings
+2026-05-08 07:27:34,141 - INFO -   Test set: 200,042 ratings
+2026-05-08 07:27:34,181 - INFO - 
+Baseline Model (predict mean = 3.581):
+2026-05-08 07:27:34,196 - INFO -   RMSE: 1.1197
+2026-05-08 07:27:34,204 - INFO -   MAE: 0.9360
+2026-05-08 07:27:34,236 - INFO - 
+Evaluating CF model on 10,000 sample ratings...
+2026-05-08 07:44:17,253 - INFO - 
+Collaborative Filtering Model (sample of 10,000 ratings):
+2026-05-08 07:44:17,255 - INFO -   RMSE: 1.1288
+2026-05-08 07:44:17,258 - INFO -   MAE: 0.8719
+2026-05-08 07:44:17,261 - INFO -   Evaluation time: 1003.01 seconds
+2026-05-08 07:44:17,264 - INFO - 
+PERFORMANCE IMPROVEMENT:
+2026-05-08 07:44:17,266 - INFO -   RMSE: -0.8% better than baseline
+2026-05-08 07:44:17,268 - INFO -   MAE: 6.8% better than baseline
+2026-05-08 07:55:24,499 - INFO - Publication-quality figure saved as 'recommendation_system_results.png'
+2026-05-08 07:58:13,230 - INFO - Starting Movie Recommendation Pipeline...
+
+2026-05-08 08:00:11,429 - INFO - Starting Movie Recommendation Pipeline...
+
+2026-05-08 08:00:11,459 - INFO - Attempting to connect to MongoDB Atlas...
+2026-05-08 08:00:11,484 - INFO -    Connecting to MongoDB: movielens_recommender
+2026-05-08 08:00:11,958 - INFO -    Successfully connected to MongoDB Atlas
+2026-05-08 08:00:12,059 - INFO -    Collection 'users' contains 6040 documents
+2026-05-08 08:00:12,080 - INFO - Executing MongoDB aggregation pipeline to construct dataframe...
+2026-05-08 08:00:46,048 - INFO -    Created DataFrame with 1,000,209 rows and 10 columns
+2026-05-08 08:00:46,050 - INFO -    Data shape: (1000209, 10)
+2026-05-08 08:00:46,112 - INFO - Building user-movie matrix...
+2026-05-08 08:00:47,793 - INFO - Matrix shape: (6040, 3706)
+2026-05-08 08:00:47,796 - INFO -   Users: 6,040
+2026-05-08 08:00:47,799 - INFO -   Movies: 3,706
+2026-05-08 08:00:47,878 - INFO -   Sparsity: 95.53%
+2026-05-08 08:00:48,502 - INFO - Training k-Nearest Neighbors model...
+2026-05-08 08:00:48,511 - INFO - Model training complete!
+2026-05-08 08:00:48,546 - INFO - Testing recommendation function...
+2026-05-08 08:00:49,531 - INFO - Evaluating model performance...
+2026-05-08 08:00:49,737 - INFO -   Training set: 800,167 ratings
+2026-05-08 08:00:49,739 - INFO -   Test set: 200,042 ratings
+2026-05-08 08:00:49,801 - INFO - 
+Baseline Model (predict mean = 3.582):
+2026-05-08 08:00:49,804 - INFO -   RMSE: 1.1211
+2026-05-08 08:00:49,807 - INFO -   MAE: 0.9375
+2026-05-08 08:00:49,827 - INFO - Evaluating CF model on 10,000 sample ratings...
+2026-05-08 08:17:58,855 - INFO - Collaborative Filtering Model (sample of 10,000 ratings):
+2026-05-08 08:17:58,858 - INFO -   RMSE: 1.1259
+2026-05-08 08:17:58,862 - INFO -   MAE: 0.8706
+2026-05-08 08:17:58,863 - INFO -   Evaluation time: 1029.03 seconds
+2026-05-08 08:17:58,866 - INFO - PERFORMANCE IMPROVEMENT:
+2026-05-08 08:17:58,868 - INFO -   RMSE: -0.4% better than baseline
+2026-05-08 08:17:58,870 - INFO -   MAE: 7.1% better than baseline
+2026-05-08 08:18:03,430 - INFO - Publication-quality figure saved as 'recommendation_system_results.png'
+2026-05-08 08:18:45,982 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-05-08 08:18:47,251 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2026-05-08 10:01:41,063 - INFO - Publication-quality figure saved as 'recommendation_system_results.png'
+2026-05-08 10:01:58,061 - INFO - Publication-quality figure saved as 'recommendation_system_results.png'
+2026-05-08 10:04:02,784 - INFO - Publication-quality figure saved as 'recommendation_system_results.png'
+2026-05-08 10:04:33,262 - INFO - Publication-quality figure saved as 'recommendation_system_results.png'
+2026-05-08 10:05:18,760 - INFO - Publication-quality figure saved as 'recommendation_system_results.png'

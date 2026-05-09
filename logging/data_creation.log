@@ -1,0 +1,132 @@
+2026-04-30 05:58:54,557 - INFO - Starting MovieLens data load process
+2026-04-30 05:58:54,558 - INFO - Timestamp: 2026-04-30 05:58:54.558402
+2026-04-30 05:58:54,559 - INFO - Data directory: /mnt/c/Users/cryst/OneDrive/Documents/spring 26/design/ds4320-project2/data-creation-code/../raw_data/ml-1m
+2026-04-30 05:58:54,561 - INFO - Step 1: Verifying data files exist
+2026-04-30 05:58:54,571 - INFO -   ✓ Found users.dat
+2026-04-30 05:58:54,579 - INFO -   ✓ Found ratings.dat
+2026-04-30 05:58:54,587 - INFO -   ✓ Found movies.dat
+2026-04-30 05:58:54,588 - INFO - Step 2: Loading CSV files into pandas DataFrames
+2026-04-30 05:58:54,589 - INFO -   Loading users.dat...
+2026-04-30 05:58:54,674 - INFO -     Loaded 6040 users
+2026-04-30 05:58:54,675 - INFO -   Loading ratings.dat...
+2026-04-30 05:59:03,255 - INFO -     Loaded 1000209 ratings
+2026-04-30 05:59:03,257 - INFO -   Loading movies.dat...
+2026-04-30 05:59:03,300 - INFO -     Loaded 3883 movies
+2026-04-30 05:59:03,301 - INFO - Step 3: Connecting to MongoDB Atlas
+2026-04-30 05:59:03,646 - INFO -   ✓ Connected to MongoDB Atlas
+2026-04-30 05:59:03,647 - INFO - Step 4: Preparing collection for new data
+2026-04-30 05:59:03,659 - INFO -   Found 6040 existing documents
+2026-04-30 05:59:04,233 - INFO -   Cleared 6040 documents from collection
+2026-04-30 05:59:04,234 - INFO - Step 5: Transforming data into document format
+2026-04-30 05:59:04,242 - INFO -   Grouped ratings by user_id
+2026-04-30 06:00:40,895 - INFO -   Processed 1000 of 6040 users...
+2026-04-30 06:02:33,638 - INFO -   Processed 2000 of 6040 users...
+2026-04-30 06:04:04,851 - INFO -   Processed 3000 of 6040 users...
+2026-04-30 06:05:57,116 - INFO -   Processed 4000 of 6040 users...
+2026-04-30 06:07:39,730 - INFO -   Processed 5000 of 6040 users...
+2026-04-30 06:09:23,696 - INFO -   Processed 6000 of 6040 users...
+2026-04-30 06:09:27,830 - INFO -   Successfully processed 6040 users
+2026-04-30 06:09:27,831 - INFO -   Total ratings processed: 1,000,209
+2026-04-30 06:09:27,832 - INFO - Step 6: Inserting documents into MongoDB
+2026-04-30 06:09:38,611 - INFO -   ✓ Successfully inserted 6040 documents
+2026-04-30 06:09:38,612 - INFO -   Total ratings stored: 1,000,209
+2026-04-30 06:09:39,393 - INFO -   Collection now has 6040 documents
+2026-04-30 06:09:39,394 - INFO - Step 7: Verifying insertion
+2026-04-30 06:09:39,411 - INFO -   ✓ Verification passed: 6040 documents in database
+2026-04-30 06:09:39,414 - INFO - MovieLens data successfully loaded into MongoDB
+2026-04-30 06:09:39,415 - INFO -    Users: 6,040
+2026-04-30 06:09:39,417 - INFO -    Ratings: 1,000,209
+2026-04-30 06:09:39,434 - INFO - MongoDB connection closed
+2026-04-30 06:09:39,775 - INFO - Script completed successfully with 6040 documents
+2026-04-30 06:17:58,654 - INFO - Environment variables loaded successfully
+2026-04-30 06:17:58,655 - INFO - Starting data validation process
+2026-04-30 06:17:58,656 - INFO - Connecting to MongoDB database: movielens_recommender
+2026-04-30 06:17:59,097 - INFO - MongoDB connection successful
+2026-04-30 06:17:59,111 - INFO - Total users in collection: 6040
+2026-04-30 06:17:59,127 - INFO - Users with 0 ratings: 0
+2026-04-30 06:17:59,143 - INFO - Users missing demographics: 0
+2026-04-30 06:17:59,840 - INFO - Global average rating: 3.58
+2026-04-30 06:17:59,842 - INFO - Rating range: 1.0 - 5.0
+2026-04-30 06:17:59,844 - INFO - Total ratings in database: 1,000,209
+2026-04-30 06:17:59,855 - INFO - Sample document structure validated
+2026-04-30 06:17:59,856 - INFO - Document schema validation passed
+2026-04-30 06:17:59,870 - INFO - MongoDB connection closed
+2026-04-30 06:17:59,872 - INFO - Data validation completed successfully
+2026-04-30 06:17:59,873 - INFO - Summary: {'total_users': 6040, 'status': 'success', 'users_without_ratings': 0, 'users_missing_demographics': 0, 'global_avg_rating': 3.581564453029317, 'rating_range': (1.0, 5.0), 'total_ratings': 1000209}
+2026-05-08 02:54:39,945 - INFO - Starting MovieLens dataset download from https://files.grouplens.org/datasets/movielens/ml-1m.zip
+2026-05-08 02:54:39,952 - INFO - Output directory: /mnt/c/Users/cryst/OneDrive/Documents/spring 26/design/ds4320-project2/data-creation-code/../raw_data
+2026-05-08 02:54:39,955 - INFO - Downloading file...
+2026-05-08 02:54:41,429 - INFO - Successfully downloaded to /mnt/c/Users/cryst/OneDrive/Documents/spring 26/design/ds4320-project2/data-creation-code/../raw_data/ml-1m.zip
+2026-05-08 02:54:41,446 - INFO - File size: 5.64 MB
+2026-05-08 02:54:41,447 - INFO - Extracting files...
+2026-05-08 02:54:43,286 - INFO - Extraction completed successfully
+2026-05-08 02:54:43,287 - INFO - Dataset successfully downloaded. File ready at: /mnt/c/Users/cryst/OneDrive/Documents/spring 26/design/ds4320-project2/data-creation-code/../raw_data/ml-1m
+2026-05-08 02:54:43,288 - INFO - Download complete! Data path: /mnt/c/Users/cryst/OneDrive/Documents/spring 26/design/ds4320-project2/data-creation-code/../raw_data/ml-1m
+2026-05-08 02:55:09,145 - INFO - Starting MovieLens dataset download from https://files.grouplens.org/datasets/movielens/ml-1m.zip
+2026-05-08 02:55:09,151 - INFO - Output directory: /mnt/c/Users/cryst/OneDrive/Documents/spring 26/design/ds4320-project2/data-creation-code/../raw_data
+2026-05-08 02:55:09,152 - INFO - Downloading file...
+2026-05-08 02:55:10,181 - INFO - Successfully downloaded to /mnt/c/Users/cryst/OneDrive/Documents/spring 26/design/ds4320-project2/data-creation-code/../raw_data/ml-1m.zip
+2026-05-08 02:55:10,195 - INFO - File size: 5.64 MB
+2026-05-08 02:55:10,196 - INFO - Extracting files...
+2026-05-08 02:55:11,809 - INFO - Extraction completed successfully
+2026-05-08 02:55:11,810 - INFO - Dataset successfully downloaded. File ready at: /mnt/c/Users/cryst/OneDrive/Documents/spring 26/design/ds4320-project2/data-creation-code/../raw_data/ml-1m
+2026-05-08 02:55:11,811 - INFO - Download complete! Data path: /mnt/c/Users/cryst/OneDrive/Documents/spring 26/design/ds4320-project2/data-creation-code/../raw_data/ml-1m
+2026-05-08 05:14:06,943 - INFO - 
+Starting MovieLens data load process...
+2026-05-08 05:14:06,945 - INFO - Data directory: /mnt/c/Users/cryst/OneDrive/Documents/spring 26/design/ds4320-project2/data-creation-code/../raw_data/ml-1m
+
+2026-05-08 05:14:06,946 - INFO - Checking for data files
+2026-05-08 05:14:06,955 - INFO -   Found users.dat
+2026-05-08 05:14:06,963 - INFO -   Found ratings.dat
+2026-05-08 05:14:06,974 - INFO -   Found movies.dat
+2026-05-08 05:14:06,975 - INFO - Loading CSV files into pandas DataFrames
+2026-05-08 05:14:06,977 - INFO -   Loading users.dat...
+2026-05-08 05:14:07,091 - INFO -     Loaded 6040 users
+2026-05-08 05:14:07,092 - INFO -   Loading ratings.dat...
+2026-05-08 05:14:16,151 - INFO -     Loaded 1000209 ratings
+2026-05-08 05:14:16,152 - INFO -   Loading movies.dat...
+2026-05-08 05:14:16,214 - INFO -     Loaded 3883 movies
+2026-05-08 05:14:16,215 - INFO - Connecting to MongoDB Atlas
+2026-05-08 05:14:16,820 - INFO -   Connected to MongoDB Atlas
+2026-05-08 05:14:16,821 - INFO - Preparing collection for new data
+2026-05-08 05:14:17,630 - INFO -   Found 6040 existing documents
+2026-05-08 05:14:18,075 - INFO -   Cleared 6040 documents from collection
+2026-05-08 05:14:18,076 - INFO - Transforming data into document format
+2026-05-08 05:14:18,086 - INFO -   Grouped ratings by user_id
+2026-05-08 05:15:58,425 - INFO -   Processed 1000 of 6040 users...
+2026-05-08 05:17:58,097 - INFO -   Processed 2000 of 6040 users...
+2026-05-08 05:19:35,043 - INFO -   Processed 3000 of 6040 users...
+2026-05-08 05:21:30,850 - INFO -   Processed 4000 of 6040 users...
+2026-05-08 05:23:21,099 - INFO -   Processed 5000 of 6040 users...
+2026-05-08 05:25:07,930 - INFO -   Processed 6000 of 6040 users...
+2026-05-08 05:25:12,259 - INFO -   Successfully processed 6040 users
+2026-05-08 05:25:12,260 - INFO -   Total ratings processed: 1,000,209
+2026-05-08 05:25:12,261 - INFO - Inserting documents into MongoDB
+2026-05-08 05:25:28,779 - INFO -   Successfully inserted 6040 documents
+2026-05-08 05:25:28,780 - INFO -   Total ratings stored: 1,000,209
+2026-05-08 05:25:28,793 - INFO -   Collection now has 6040 documents
+2026-05-08 05:25:28,794 - INFO - Verifying insertion
+2026-05-08 05:25:28,807 - INFO -   Verification passed: 6040 documents in database
+2026-05-08 05:25:28,808 - INFO - 
+ MovieLens data successfully loaded into MongoDB
+2026-05-08 05:25:28,809 - INFO -    Users: 6,040
+2026-05-08 05:25:28,810 - INFO -    Ratings: 1,000,209
+2026-05-08 05:25:28,822 - INFO - MongoDB connection closed
+2026-05-08 05:25:29,165 - INFO - Script completed successfully with 6040 documents
+2026-05-08 05:40:03,726 - INFO - Environment variables loaded successfully
+2026-05-08 05:40:03,727 - INFO - 
+Starting data validation process...
+
+2026-05-08 05:40:03,728 - INFO - Connecting to MongoDB database: movielens_recommender
+2026-05-08 05:40:04,252 - INFO - MongoDB connection successful
+2026-05-08 05:40:04,367 - INFO - Total users in collection: 6040
+2026-05-08 05:40:04,382 - INFO - Users with 0 ratings: 0
+2026-05-08 05:40:04,398 - INFO - Users missing demographics: 0
+2026-05-08 05:40:05,107 - INFO - Global average rating: 3.58
+2026-05-08 05:40:05,108 - INFO - Rating range: 1.0 - 5.0
+2026-05-08 05:40:05,109 - INFO - Total ratings in database: 1,000,209
+2026-05-08 05:40:05,121 - INFO - Sample document structure validated
+2026-05-08 05:40:05,122 - INFO - Document schema validation passed
+2026-05-08 05:40:05,131 - INFO - MongoDB connection closed
+2026-05-08 05:40:05,133 - INFO - Data validation completed successfully
+2026-05-08 05:40:05,134 - INFO - Summary: {'total_users': 6040, 'status': 'success', 'users_without_ratings': 0, 'users_missing_demographics': 0, 'global_avg_rating': 3.581564453029317, 'rating_range': (1.0, 5.0), 'total_ratings': 1000209}
