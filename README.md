@@ -7,7 +7,7 @@ This repository contains the complete data pipeline and analysis for a movie rec
 | --- | --- |
 | Name | Crystal McEnhimer |
 | NetID | vcx4ka |
-| DOI | [![DOI](https://zenodo.org/badge/1189840726.svg)](https://doi.org/10.5281/zenodo.19378548) |
+| DOI | [![DOI](https://zenodo.org/badge/1211801583.svg)](https://doi.org/10.5281/zenodo.20091963) |
 | Press Release | [PRESS-RELEASE.md](PRESS-RELEASE.md) |
 | Pipeline | [solution-pipeline.ipynb](solution-pipeline.ipynb) [solution-pipeline.md](solution-pipeline.md) |
 | License State | [MIT License](LICENSE.md) |
